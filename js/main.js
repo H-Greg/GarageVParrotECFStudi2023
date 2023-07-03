@@ -1,84 +1,84 @@
-// Sélectionnez tous les éléments avec la classe "carBrand"
+// Select all elements with the class "carBrand"
 var carBrandCheckboxes = document.querySelectorAll(".carBrand");
 
-// Sélectionnez l'élément d'entrée de l'année
+// Select the car year input element
 var carYearInput = document.getElementById("carYear");
 
-// Obtenez toutes les lignes du tableau des résultats
+// Get all rows from the results table
 var lignesResultats = document.querySelectorAll("div.filtered tbody tr");
 
-// Sélectionnez tous les libellés des cases à cocher
+// Select all checkbox labels
 var carBrandLabels = document.querySelectorAll("label[for^='Brand']");
 
-// Ajoutez un gestionnaire d'événements à chaque libellé de marque
+// Add an event listener to each brand label
 carBrandLabels.forEach(function (label) {
   label.addEventListener("click", toggleCheckbox);
 });
 
-// Fonction pour basculer l'état de la case à cocher correspondante
+// Function to toggle the state of the corresponding checkbox
 function toggleCheckbox(event) {
   var checkbox = event.target.previousElementSibling;
   checkbox.checked = !checkbox.checked;
-  filterResults(); // Appeler la fonction de filtrage après avoir basculé l'état de la case à cocher
+  filterResults(); // Call the filter function after toggling the checkbox
 }
 
-// Ajoutez un gestionnaire d'événements à chaque case à cocher et à l'entrée de l'année
+// Add event listeners to each checkbox and the car year input
 carBrandCheckboxes.forEach(function (checkbox) {
   checkbox.addEventListener("change", filterResults);
 });
 
 carYearInput.addEventListener("input", filterResults);
 
-// Sélectionnez l'élément d'entrée du prix minimum
+// Select the car minimum price input element
 var carPriceMinInput = document.getElementById("carPriceMin");
 
-// Sélectionnez l'élément d'entrée du prix maximum
+// Select the car maximum price input element
 var carPriceMaxInput = document.getElementById("carPriceMax");
 
-// Ajoutez un gestionnaire d'événements à chaque entrée de prix
+// Add event listeners to each price input
 carPriceMinInput.addEventListener("input", filterResults);
 carPriceMaxInput.addEventListener("input", filterResults);
 
-// Sélectionnez l'élément d'entrée du kilométrage
+// Select the car mileage input element
 var carMilesInput = document.getElementById("carMilesMax");
 
-// Obtenez la valeur de l'entrée du kilométrage maximum
+// Get the value of the maximum mileage input
 var kilometrageMaxFiltre = parseInt(carMilesInput.value);
 
-// Ajoutez un gestionnaire d'événements à l'entrée du kilométrage
+// Add an event listener to the mileage input
 carMilesInput.addEventListener("input", filterResults);
 
-// Fonction pour filtrer les résultats
+// Function to filter the results
 function filterResults() {
-  // Réinitialisez l'affichage de toutes les lignes
+  // Reset the display of all rows
   lignesResultats.forEach(function (ligne) {
     ligne.style.display = "";
   });
 
-  // Créez un tableau pour stocker les filtres sélectionnés
+  // Create an array to store the selected filters
   var filtresSelectionnes = [];
 
-  // Parcourez chaque case à cocher pour appliquer les filtres sélectionnés
+  // Loop through each checkbox to apply the selected filters
   carBrandCheckboxes.forEach(function (checkbox) {
     if (checkbox.checked) {
-      // Ajoutez le filtre sélectionné au tableau
+      // Add the selected filter to the array
       filtresSelectionnes.push(checkbox.value);
     }
   });
 
-  // Obtenez la valeur de l'entrée de l'année
+  // Get the value of the year input
   var anneeFiltre = parseInt(carYearInput.value);
 
-  // Obtenez la valeur de l'entrée du prix minimum
+  // Get the value of the minimum price input
   var prixMinFiltre = parseInt(carPriceMinInput.value);
 
-  // Obtenez la valeur de l'entrée du prix maximum
+  // Get the value of the maximum price input
   var prixMaxFiltre = parseInt(carPriceMaxInput.value);
 
-   // Obtenez la valeur de l'entrée du kilométrage
+   // Get the value of the mileage input
    var kilometrageFiltre = parseInt(carMilesInput.value);
 
-  // Parcourez chaque ligne du tableau des résultats
+  // Loop through each row in the results table
   for (var i = 0; i < lignesResultats.length; i++) {
     var ligne = lignesResultats[i];
     var marque = ligne.querySelector("td:nth-child(1)").textContent;
@@ -86,7 +86,7 @@ function filterResults() {
     var prix = parseInt(ligne.querySelector("td:nth-child(3)").textContent);
     var kilometrage = parseInt(ligne.querySelector("td:nth-child(4)").textContent);
 
-    // Affichez ou masquez la ligne en fonction des filtres sélectionnés, de l'année et des prix
+    // Show or hide the row based on the selected filters, year, and prices
     if (
       (filtresSelectionnes.length > 0 && !filtresSelectionnes.includes(marque)) ||
       (anneeFiltre && annee !== anneeFiltre) ||
@@ -103,33 +103,33 @@ function filterResults() {
 
 
 
-// Limiter l'input de l'année à 4 chiffres maximum
+// Limit the year input to a maximum of 4 digits
 var carYearInput = document.getElementById("carYear");
 
 carYearInput.addEventListener("input", function () {
   var value = this.value;
 
-  // Supprimer tous les caractères non numériques
+  // Remove all non-numeric characters
   value = value.replace(/\D/g, "");
 
-  // Limiter la valeur à 4 chiffres
+  // Limit the value to 4 digits
   value = value.slice(0, 4);
 
-  // Mettre à jour la valeur de l'élément <input>
+  // Update the value of the <input> element
   this.value = value;
 });
 
 
 
 
-// Tri initial au chargement de la page (par ordre alphabétique croissant)
+// Initial sorting on page load (ascending alphabetical order)
 window.addEventListener("DOMContentLoaded", () => {
   sortingSelect.value = "alphabeticalGrowing";
   sortingSelect.dispatchEvent(new Event("change"));
 });
 
 
-// Trier le tableau en fonction de la sélection faite dans le menu déroulant "sorting"
+// Sort the table based on the selected value in the "sorting"
 const sortingSelect = document.getElementById("sorting");
 const tableBody = document.querySelector(".filtered tbody");
 const rows = Array.from(tableBody.querySelectorAll("tr"));
@@ -201,7 +201,7 @@ sortingSelect.addEventListener("change", () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Boite modale pour la connexion
+  // Modal box for login
   var logo = document.getElementById('logo');
   var modal = document.getElementById('modal');
   var close = document.getElementsByClassName('close')[0];
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Boîte modale pour les voitures
+  // Modal box for cars
   var modifyButton = document.getElementById('modify-car');
   var carModal = document.getElementById('carModal');
   var carModalClose = carModal.getElementsByClassName('close')[0];
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Boîte modale pour les commentaires en attente
+  // Modal box for pending comments
   var moderateButton = document.getElementById('moderate-commentary');
   var commentaryModal = document.getElementById('commentaryModal');
   var commentaryModalClose = commentaryModal.getElementsByClassName('close')[0];
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Lorsque l'administrateur clique sur le bouton "Modifier"
+// When the administrator clicks on the "Modify" button
 document.querySelector('.modify-article').addEventListener('click', function() {
     document.getElementById('modifyArticle').style.display = 'block';
     document.getElementById('article').style.display = 'none';
@@ -274,15 +274,15 @@ document.querySelector('.modify-article').addEventListener('click', function() {
 
 
 
-    // Gérer l'événement de pression de la touche Tab dans la zone de texte
+    // Handle the Tab key press event in the text area
     document.getElementById("textareaArticle").addEventListener("keydown", function(e) {
         if (e.key === "Tab") {
-            e.preventDefault(); // Empêcher le comportement par défaut (changement de focus)
+            e.preventDefault(); // Prevent default behavior (focus change)
             var start = this.selectionStart;
             var end = this.selectionEnd;
-            // Insérer une tabulation à la position actuelle du curseur
+            // Insert a tab at the current cursor position
             this.value = this.value.substring(0, start) + "\t" + this.value.substring(end);
-            // Déplacer le curseur après la tabulation
+            // Move the cursor after the tab
             this.selectionStart = this.selectionEnd = start + 1;
         }
     });
@@ -293,7 +293,7 @@ document.querySelector('.modify-article').addEventListener('click', function() {
 
 
 
-// Lorsque l'utilisateur clique sur l'adresse e-mail
+// When the user clicks on the email address
 function showContactForm() {
     var contactForm = document.getElementsByClassName("contactForm")[0];
     contactForm.style.display = "flex";
@@ -302,15 +302,15 @@ function showContactForm() {
 
 
 
-  // Vérifie si l'URL contient le paramètre "modal-open" pour garder la boîte modale ouverte
-  if (window.location.search.includes('modal-open')) {
+// Check if the URL contains the "modal-open" parameter to keep the modal box open
+if (window.location.search.includes('modal-open')) {
     var commentaryModal = document.getElementById('commentaryModal');
     commentaryModal.style.display = 'block';
   }
 
 
 
-  // Vérifie si l'URL contient le paramètre "modal-open" pour garder la boîte modale ouverte
+  // Check if the URL contains the "modal-open" parameter to keep the modal box open
   if (window.location.search.includes('modal-open')) {
     var commentaryModal = document.getElementById('commentaryModal');
     commentaryModal.style.display = 'block';
