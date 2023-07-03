@@ -1,0 +1,8 @@
+Name: Lucas Anderson
+Comment: Un énorme merci à l'équipe du garage pour avoir pris soin de ma voiture. Vous avez fait un travail remarquable et je suis vraiment impressionné par votre professionnalisme. Merci encore !
+Rating: 3
+
+Name: Maxime Nguyen
+Comment: Je suis extrêmement reconnaissant envers le garage automobile pour leur expertise et leur dévouement. Ils ont résolu un problème compliqué avec ma voiture et je suis très satisfait du résultat. Merci pour votre savoir-faire !
+Rating: 4
+

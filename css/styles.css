@@ -1,0 +1,333 @@
+                    /* ========== Common Styles ========== */
+html, body {
+    background-color: #f2f2f2;
+    font-size: 40px;
+    width: 99%;
+    height: auto;
+}
+
+input, select {
+    height: 25px;
+}
+
+                    /* ========== Header Styles ========== */
+header {
+    box-shadow: -10px 10px 10px #D92332;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 600px;
+    margin-bottom: 50px;
+}
+
+header:hover {
+    box-shadow: 0px 0px 50px #D92332;
+}
+
+.logo {
+    max-width: 320px;
+    margin-left: 50px;
+}
+
+h1 {
+    color: #D92332;
+    margin-right: 50px;
+}
+
+                    /* ========== Article Styles ========== */
+article {
+    box-shadow: 10px 10px 10px #D92332;
+    min-width: 600px;
+    margin-bottom: 50px;
+}
+
+article:hover {
+    box-shadow: 0px 0px 50px #D92332;
+}
+
+article p {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+                    /* ========== Contact Styles ========== */
+.contact, .contact-link {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.phone, .mail {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.phone img, .mail img {
+    align-self: center;
+}
+
+.phone p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+
+.mail p {
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+.contactForm {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.message {
+    resize: none;
+    min-width: 400px;
+    min-height: 200px;
+}
+
+                    /* ========== To Sell Styles ========== */
+.toSell {
+    box-shadow: -10px 10px 10px #D92332;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 600px;
+    margin-bottom: 50px;
+}
+
+.toSell:hover {
+    box-shadow: 0px 0px 50px #D92332;
+}
+
+.filters, .filtered {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.filters {
+    max-width: 25%;
+}
+
+.filtered {
+    max-width: 75%;
+}
+
+thead {
+    display: none;
+}
+
+tbody {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+tr {
+    box-shadow: 0px 0px 10px #D92332;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    transition: transform 0.3s ease;
+}
+
+tr:hover {
+    transform: scale(1.1);
+}
+
+td img {
+    max-width: 200px;
+}
+
+.delete-car {
+    color: #D92332;
+    text-decoration: none;
+}
+
+.delete-car:hover {
+    box-shadow: 0px 0px 10px #D92332;
+}
+
+                    /* ========== Commentary Styles ========== */
+.commentary {
+    box-shadow: 10px 10px 10px #D92332;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    align-items: center;
+    min-width: 600px;
+    margin-bottom: 50px;
+}
+
+.commentary:hover {
+    box-shadow: 0px 0px 50px #D92332;
+}
+
+.commentary h2 {
+    color: #D92332;
+}
+
+#comments-container {
+    max-height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    min-width: 100%;
+}
+
+.star-red {
+    color: #D92332;
+    font-size: 50px;
+}
+
+.star-white {
+    color: #f2f2f2;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+#write-comment {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    min-width: 100%;
+    text-align: center;
+}
+
+#rating,
+#name {
+    height: 50px;
+}
+
+#comment {
+    height: 100px;
+    resize: none;
+}
+
+#submitCommentaryButton {
+    margin-top: 30px;
+    min-width: 200px;
+    min-height: 50px;
+    align-self: center;
+}
+
+.waiting-commentary {
+    list-style-type: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+                    /* ========== Footer Styles ========== */
+footer {
+    box-shadow: -10px 10px 10px #D92332;
+    min-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer:hover {
+    box-shadow: 0px 0px 50px #D92332;
+}
+
+footer p {
+    margin-left: 100px;
+}
+
+.contact-footer {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 10px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+}
+
+.network {
+    margin-top: 30px;
+    display: flex;
+    gap: 100px;
+}
+
+.modify-button {
+    background-color: #D92332;
+    color: #f2f2f2;
+    width: 100px;
+    height: 30px;
+    display: initial;
+    position: relative;
+}
+
+.submit-button a {
+    text-decoration: none;
+    color: black;
+}
+
+                    /* ========== Modal Styles ========== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #f2f2f2;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0px 0px 50px #D92332;
+}
+
+.brandInput,
+.yearInput,
+.priceInput,
+.mileageInput,
+.email-input,
+.password-input,
+.submit-button {
+    height: 25px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
