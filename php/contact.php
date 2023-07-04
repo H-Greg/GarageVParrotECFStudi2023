@@ -20,7 +20,7 @@
 
 <!-- Contact form section initially hidden -->
 <div class="contactForm" style="display: none;">
-    <form action="send_email.php" method="POST">
+    <form action="sendEmail.php" method="POST">
 
         <!-- Input field for first name -->
         <label for="firstName">Prénom :</label>

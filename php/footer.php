@@ -77,7 +77,7 @@ function getOriginalHoursContentDecoded()
     </div>  
         
         <div class="contactForm" style="display: none;">
-    <form action="send_email.php" method="POST">
+    <form action="sendEmail.php" method="POST">
         <label for="firstName">Prénom :</label>
         <input type="text" class="firstName" name="firstName" required><br>
 
