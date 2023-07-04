@@ -1,3 +1,5 @@
+//===== Filter and sorting management of results =====
+
 // Select all elements with the class "carBrand"
 var carBrandCheckboxes = document.querySelectorAll(".carBrand");
 
@@ -101,7 +103,7 @@ function filterResults() {
 
 
 
-
+//===== Limiting the input for the year =====
 
 // Limit the year input to a maximum of 4 digits
 var carYearInput = document.getElementById("carYear");
@@ -121,6 +123,7 @@ carYearInput.addEventListener("input", function () {
 
 
 
+//===== Initial sorting on page load =====
 
 // Initial sorting on page load (ascending alphabetical order)
 window.addEventListener("DOMContentLoaded", () => {
@@ -128,6 +131,9 @@ window.addEventListener("DOMContentLoaded", () => {
   sortingSelect.dispatchEvent(new Event("change"));
 });
 
+
+
+//===== Sorting of the results table =====
 
 // Sort the table based on the selected value in the "sorting"
 const sortingSelect = document.getElementById("sorting");
@@ -196,9 +202,7 @@ sortingSelect.addEventListener("change", () => {
 });
 
 
-
-
-
+//===== Modal box =====
 
 document.addEventListener('DOMContentLoaded', function() {
   // Modal box for login
@@ -260,11 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-
-
-
+//===== Article modification =====
 
 // When the administrator clicks on the "Modify" button
 document.querySelector('.modify-article').addEventListener('click', function() {
@@ -273,6 +273,7 @@ document.querySelector('.modify-article').addEventListener('click', function() {
 });
 
 
+//===== Handling the Tab key in the article text area  =====
 
     // Handle the Tab key press event in the text area
     document.getElementById("textareaArticle").addEventListener("keydown", function(e) {
@@ -289,9 +290,7 @@ document.querySelector('.modify-article').addEventListener('click', function() {
 
 
 
-
-
-
+//===== Displaying the contact form =====
 
 // When the user clicks on the email address
 function showContactForm() {
@@ -300,18 +299,10 @@ function showContactForm() {
 }
 
 
-
+//===== Checking for the presence of the "modal-open" parameter in the URL =====
 
 // Check if the URL contains the "modal-open" parameter to keep the modal box open
 if (window.location.search.includes('modal-open')) {
-    var commentaryModal = document.getElementById('commentaryModal');
-    commentaryModal.style.display = 'block';
-  }
-
-
-
-  // Check if the URL contains the "modal-open" parameter to keep the modal box open
-  if (window.location.search.includes('modal-open')) {
     var commentaryModal = document.getElementById('commentaryModal');
     commentaryModal.style.display = 'block';
   }
