@@ -4,6 +4,7 @@ html, body {
     font-size: 40px;
     width: 99%;
     height: auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 input, select {
