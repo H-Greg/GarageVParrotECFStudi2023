@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: admin.php");
         exit();
     } else {
-        echo "Erreur lors de l'ajout de l'utilisateur.";
+        echo "Error while adding the user.";
     }
 
     // Close the database connection

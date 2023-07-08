@@ -11,7 +11,7 @@ $conn = new mysqli($servername, $username, $dbPassword, $database);
 
 // Check if the connection failed
 if ($conn->connect_error) {
-    die("Échec de la connexion à la base de données: " . $conn->connect_error);
+    die("Database connection error:" . $conn->connect_error);
 }
 
 // Check if the form has been submitted
@@ -44,14 +44,14 @@ if (isset($_POST['addCar'])) {
             header("Location: admin.php");
             exit();
         } else {
-            echo "Erreur lors de l'ajout de la voiture : " . $stmt->error;
+            echo "Error while adding the car:" . $stmt->error;
         }
 
         // Close the statement
         $stmt->close();
     } else {
         // An error occurred while moving the file
-        echo "Erreur lors du téléchargement du fichier.";
+        echo "Error while uploading the file.";
     }
 
     // Close the connection

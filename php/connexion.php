@@ -7,7 +7,7 @@ $database = 'garage_v_parrot';
 // Connection to the database
 $conn = mysqli_connect($host, $user, $password, $database);
 if (!$conn) {
-    die("Erreur de connexion à la base de données: " . mysqli_connect_error());
+    die("Database connection error:" . mysqli_connect_error());
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

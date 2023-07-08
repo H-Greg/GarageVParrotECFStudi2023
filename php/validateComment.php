@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Check if the connection failed
         if ($conn->connect_error) {
-            die("La connexion à la base de données a échoué: " . $conn->connect_error);
+            die("Database connection error:" . $conn->connect_error);
         }
 
         // Prepare the comment insertion query

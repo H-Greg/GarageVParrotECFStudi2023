@@ -26,11 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email
     if (mail($to, $subject, $emailBody, $headers)) {
-        echo "Votre message a été envoyé avec succès.";
+        echo "Your message has been sent successfully.";
     } else {
-        echo "Une erreur s'est produite lors de l'envoi du message.";
+        echo "An error occurred while sending the message.";
     }
 } else {
-    echo "Une erreur s'est produite lors du traitement du formulaire.";
+    echo "An error occurred while processing the form.";
 }
+
+header("Location: ../php/index.php");
 ?>

@@ -8,15 +8,15 @@ $conn = new mysqli($servername, $username, $password);
 
 // Check the connection
 if ($conn->connect_error) {
-    die("Échec de la connexion : " . $conn->connect_error);
+    die("Database connection error: " . $conn->connect_error);
 }
 
 // Create the database
 $sql = "CREATE DATABASE IF NOT EXISTS garage_v_parrot";
 if ($conn->query($sql) === TRUE) {
-    echo "Base de données créée avec succès.<br>";
+    echo "Database created successfully.<br>";
 } else {
-    echo "Erreur lors de la création de la base de données : <br>" . $conn->error;
+    echo "Error while creating the database:<br>" . $conn->error;
 }
 
 // Select the database
@@ -31,9 +31,9 @@ $sql = "CREATE TABLE IF NOT EXISTS employees (
 )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Table 'employees' créée avec succès.<br>";
+    echo "Table 'employees' created successfully.<br>";
 } else {
-    echo "Erreur lors de la création de la table 'employees' : <br>" . $conn->error;
+    echo "Error while creating the 'employees' table:<br>" . $conn->error;
 }
 
 // Generate a random ID
@@ -55,12 +55,12 @@ $sql = "INSERT INTO employees (id, email, password, role)
 
 if ($conn->query($sql) === TRUE) {
     if ($conn->affected_rows > 0) {
-        echo "Employé créé avec succès.<br>";
+        echo "Employee created successfully.<br>";
     } else {
-        echo "Cet employé existe déjà.<br>";
+        echo "This employee already exists.<br>";
     }
 } else {
-    echo "Erreur lors de la création de l'employé : <br>" . $conn->error;
+    echo "Error while creating the employee:<br>" . $conn->error;
 }
 
 // Create the cars table
@@ -74,9 +74,9 @@ $sql = "CREATE TABLE IF NOT EXISTS cars (
 )";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Table 'voiture' créée avec succès.<br>";
+    echo "Table 'cars' created successfully.<br>";
 } else {
-    echo "Erreur lors de la création de la table : <br>" . mysqli_error($conn);
+    echo "Error while creating the table:<br>" . mysqli_error($conn);
 }
 
 // Create the commentary table
@@ -88,9 +88,9 @@ $sql = "CREATE TABLE IF NOT EXISTS commentary (
 )";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Table 'commentaires' créée avec succès.";
+    echo "Table 'comments' created successfully.";
 } else {
-    echo "Erreur lors de la création de la table : " . mysqli_error($conn);
+    echo "Error while creating the table:" . mysqli_error($conn);
 }
 
 // Close the connection

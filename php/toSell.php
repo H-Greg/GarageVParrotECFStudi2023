@@ -11,7 +11,7 @@ $conn = new mysqli($servername, $username, $dbPassword, $database);
         
 // Check the connection
 if ($conn->connect_error) {
-    die("Erreur de connexion à la base de données : " . $conn->connect_error);
+    die("Database connection error:" . $conn->connect_error);
     }
         
 // Retrieve car data from the database
