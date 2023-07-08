@@ -12,7 +12,7 @@ input, select {
 
                     /* ========== Header Styles ========== */
 header {
-    box-shadow: -10px 10px 10px #D92332;
+    box-shadow: -10px 10px 10px #0018A0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,7 @@ header {
 }
 
 header:hover {
-    box-shadow: 0px 0px 50px #D92332;
+    box-shadow: 0px 0px 50px #0018A0;
 }
 
 .logo {
@@ -30,19 +30,19 @@ header:hover {
 }
 
 h1 {
-    color: #D92332;
+    color: #0018A0;
     margin-right: 50px;
 }
 
                     /* ========== Article Styles ========== */
 article {
-    box-shadow: 10px 10px 10px #D92332;
+    box-shadow: 10px 10px 10px #0018A0;
     min-width: 600px;
     margin-bottom: 50px;
 }
 
 article:hover {
-    box-shadow: 0px 0px 50px #D92332;
+    box-shadow: 0px 0px 50px #0018A0;
 }
 
 article p {
@@ -99,7 +99,7 @@ article p {
 
                     /* ========== To Sell Styles ========== */
 .toSell {
-    box-shadow: -10px 10px 10px #D92332;
+    box-shadow: -10px 10px 10px #0018A0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -108,7 +108,7 @@ article p {
 }
 
 .toSell:hover {
-    box-shadow: 0px 0px 50px #D92332;
+    box-shadow: 0px 0px 50px #0018A0;
 }
 
 .filters, .filtered {
@@ -134,7 +134,7 @@ tbody {
 }
 
 tr {
-    box-shadow: 0px 0px 10px #D92332;
+    box-shadow: 0px 0px 10px #0018A0;
     margin: 5px;
     padding: 5px;
     display: flex;
@@ -152,17 +152,17 @@ td img {
 }
 
 .delete-car {
-    color: #D92332;
+    color: #0018A0;
     text-decoration: none;
 }
 
 .delete-car:hover {
-    box-shadow: 0px 0px 10px #D92332;
+    box-shadow: 0px 0px 10px #0018A0;
 }
 
                     /* ========== Commentary Styles ========== */
 .commentary {
-    box-shadow: 10px 10px 10px #D92332;
+    box-shadow: 10px 10px 10px #0018A0;
     display: flex;
     justify-content: flex-start;
     flex-flow: column wrap;
@@ -172,11 +172,11 @@ td img {
 }
 
 .commentary:hover {
-    box-shadow: 0px 0px 50px #D92332;
+    box-shadow: 0px 0px 50px #0018A0;
 }
 
 .commentary h2 {
-    color: #D92332;
+    color: #0018A0;
 }
 
 #comments-container {
@@ -188,7 +188,7 @@ td img {
 }
 
 .star-red {
-    color: #D92332;
+    color: #0018A0;
     font-size: 50px;
 }
 
@@ -240,7 +240,7 @@ td img {
 
                     /* ========== Footer Styles ========== */
 footer {
-    box-shadow: -10px 10px 10px #D92332;
+    box-shadow: -10px 10px 10px #0018A0;
     min-width: 600px;
     display: flex;
     justify-content: space-between;
@@ -248,7 +248,7 @@ footer {
 }
 
 footer:hover {
-    box-shadow: 0px 0px 50px #D92332;
+    box-shadow: 0px 0px 50px #0018A0;
 }
 
 footer p {
@@ -270,7 +270,7 @@ footer p {
 }
 
 .modify-button {
-    background-color: #D92332;
+    background-color: #0018A0;
     color: #f2f2f2;
     width: 100px;
     height: 30px;
@@ -303,7 +303,7 @@ footer p {
     border: 1px solid #888;
     width: 600px;
     text-align: center;
-    box-shadow: 0px 0px 50px #D92332;
+    box-shadow: 0px 0px 50px #0018A0;
 }
 
 .brandInput,
