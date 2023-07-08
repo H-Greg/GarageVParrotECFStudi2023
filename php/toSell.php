@@ -43,6 +43,8 @@ if (isset($_GET['delete_id'])) {
             // Delete the image from the "uploads" directory
             unlink($uploadDirectory . $imageToDelete);
                 }
+            
+                header('Location: admin.php');
             }
         }
 

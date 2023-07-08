@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         file_put_contents('../waitingCommentary.txt', $updatedCommentary);
 
         // Redirect to the page where the modal box is located
-        header('Location: commentaryModal.php?modal-open');
+        header('Location: admin.php');
         exit();
     }
 }
