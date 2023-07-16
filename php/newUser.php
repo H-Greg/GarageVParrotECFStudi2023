@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Check if the insertion was successful
     if ($stmt->affected_rows > 0) {
-        header("Location: admin.php");
+        header("Location: admin.php?userAdded=true&email=$email&password=$password");
         exit();
     } else {
         echo "Error while adding the user.";

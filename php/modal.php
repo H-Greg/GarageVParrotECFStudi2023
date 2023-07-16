@@ -30,5 +30,10 @@
             </form>
 <?php     } ?>
 
+<!-- Success message for new user -->
+<?php if (isset($_GET['userAdded']) && $_GET['userAdded'] === 'true') { ?>
+            <p>L'utilisateur '<?php echo $_GET['email']; ?>', '<?php echo $_GET['password']; ?>' a été ajouté avec succès.</p>
+        <?php } ?>
+
     </div>
 </div>
