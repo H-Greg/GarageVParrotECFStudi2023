@@ -336,3 +336,36 @@ footer p {
     text-decoration: none;
     cursor: pointer;
 }
+
+                    /* ========== Media Queries ========== */
+
+                    @media (max-width: 1236px) {
+                        /* ========== Footer Styles ========== */
+    footer {
+        flex-flow: column wrap;
+    }
+    }
+    
+    @media (max-width: 1066px) {
+                        /* ========== Header Styles ========== */
+    header {
+        flex-flow: column wrap;
+    }
+    
+                        /* ========== To Sell Styles ========== */
+    .toSell {
+        flex-flow: column wrap;
+    }
+    
+    .filters, .filtered {
+        max-width: 100%;
+    }
+    }
+    
+    @media (max-width: 700px) {
+                        /* ========== Common Styles ========== */
+    html, body {
+        font-size: 30px;
+        zoom: 0.8;
+    }
+}
