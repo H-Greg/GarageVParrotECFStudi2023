@@ -92,6 +92,12 @@ if (isset($_GET['delete_id'])) {
     </div>
     
     <div class="filtered">
+        <h2>Nos véhicules d'occasion:</h2>
+        
+        <div id="noResultMessage" style="display: none;">
+             Aucune voiture trouvée dans la base de données.
+        </div>
+
         <table>
             <thead>
                 <tr>

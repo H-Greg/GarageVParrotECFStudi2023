@@ -80,6 +80,9 @@ function filterResults() {
    // Get the value of the mileage input
    var kilometrageFiltre = parseInt(carMilesInput.value);
 
+   // Variable to check if any results are found
+  var resultsFound = false;
+
   // Loop through each row in the results table
   for (var i = 0; i < lignesResultats.length; i++) {
     var ligne = lignesResultats[i];
@@ -97,7 +100,17 @@ function filterResults() {
       (kilometrageFiltre && kilometrage > kilometrageFiltre)
     ) {
       ligne.style.display = "none";
+    } else {
+      // At least one result is found
+      resultsFound = true;
     }
+  }
+  // If no results are found, display the message
+  var noResultMessage = document.getElementById("noResultMessage");
+  if (!resultsFound) {
+    noResultMessage.style.display = "block";
+  } else {
+    noResultMessage.style.display = "none";
   }
 }
 
